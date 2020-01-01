@@ -11,16 +11,15 @@ import XCTest
 
 class FizzBuzz {
     static func process(_ number: Int) -> String {
-        
         if number.isMultiple(of: 15) {
             return "FizzBuzz"
         } else if number.isMultiple(of: 3) {
             return "Fizz"
         } else if number.isMultiple(of: 5) {
             return "Buzz"
+        } else {
+            return "\(number)"
         }
-        
-        return "\(number)"
     }
 }
 
