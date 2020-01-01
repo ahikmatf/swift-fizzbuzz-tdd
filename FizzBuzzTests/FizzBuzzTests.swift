@@ -45,10 +45,16 @@ class FizzBuzzTests: XCTestCase {
         expecting(5, willResult: "Buzz")
     }
     
+    func testWhenInputIsMultipleOfFiveThenReturnBuzz() {
+        expecting(10, willResult: "Buzz")
+        expecting(15, willResult: "Buzz")
+        expecting(20, willResult: "Buzz")
+    }
+    
     
     // MARK :- Helpers
-    private func expecting(_ number: Int, willResult target: String) {
+    private func expecting(_ number: Int, willResult target: String, file: StaticString = #file, line: UInt = #line) {
         let result = FizzBuzz.process(number)
-        XCTAssertEqual(result, target)
+        XCTAssertEqual(result, target, file: file, line: line)
     }
 }
