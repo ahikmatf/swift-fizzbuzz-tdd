@@ -34,14 +34,9 @@ class FizzBuzzTests: XCTestCase {
     }
     
     func testWhenInputIsMultipleOfThreeThenReturnFizz() {
-        let resultOf6 = FizzBuzz.process(6)
-        XCTAssertEqual(resultOf6, "Fizz")
-        
-        let resultOf9 = FizzBuzz.process(9)
-        XCTAssertEqual(resultOf9, "Fizz")
-        
-        let resultOf12 = FizzBuzz.process(12)
-        XCTAssertEqual(resultOf12, "Fizz")
+        expecting(6, willResult: "Fizz")
+        expecting(9, willResult: "Fizz")
+        expecting(12, willResult: "Fizz")
     }
     
     
