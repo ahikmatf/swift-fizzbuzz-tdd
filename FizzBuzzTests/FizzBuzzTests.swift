@@ -11,7 +11,7 @@ import XCTest
 
 class FizzBuzz {
     static func process(_ number: Int) -> String {
-        if number % 15 == 0 {
+        if number.isMultiple(of: 15) {
             return "FizzBuzz"
         } else if number % 3 == 0 {
             return "Fizz"
