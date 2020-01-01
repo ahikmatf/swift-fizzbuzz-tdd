@@ -11,10 +11,15 @@ import XCTest
 
 class FizzBuzz {
     static func process(_ number: Int) -> String {
-        return ""
+        return "1"
     }
 }
 
 class FizzBuzzTests: XCTestCase {
+    
+    func testWhenInputIsOne() {
+        let result = FizzBuzz.process(1)
+        XCTAssertEqual(result, "1")
+    }
     
 }
