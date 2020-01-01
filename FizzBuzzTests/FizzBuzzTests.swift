@@ -22,8 +22,7 @@ class FizzBuzz {
 class FizzBuzzTests: XCTestCase {
     
     func testWhenInputIsOne() {
-        let result = FizzBuzz.process(1)
-        XCTAssertEqual(result, "1")
+        expecting(1, willResult: "1")
     }
     
     func testWhenInputIsTwo() {
@@ -47,4 +46,10 @@ class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(resultOf12, "Fizz")
     }
     
+    
+    // MARK :- Helpers
+    private func expecting(_ number: Int, willResult target: String) {
+        let result = FizzBuzz.process(number)
+        XCTAssertEqual(result, target)
+    }
 }
