@@ -13,7 +13,7 @@ class FizzBuzz {
     static func process(_ number: Int) -> String {
         if number % 3 == 0 {
             return "Fizz"
-        } else if number == 5 {
+        } else if number % 5 == 0 {
             return "Buzz"
         }
         
@@ -47,8 +47,8 @@ class FizzBuzzTests: XCTestCase {
     
     func testWhenInputIsMultipleOfFiveThenReturnBuzz() {
         expecting(10, willResult: "Buzz")
-        expecting(15, willResult: "Buzz")
         expecting(20, willResult: "Buzz")
+        expecting(25, willResult: "Buzz")
     }
     
     
