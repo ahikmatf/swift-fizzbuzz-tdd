@@ -11,6 +11,10 @@ import XCTest
 
 class FizzBuzz {
     static func process(_ number: Int) -> String {
+        if number == 3 {
+            return "Fizz"
+        }
+        
         return "\(number)"
     }
 }
@@ -25,6 +29,11 @@ class FizzBuzzTests: XCTestCase {
     func testWhenInputIsTwo() {
         let result = FizzBuzz.process(2)
         XCTAssertEqual(result, "2")
+    }
+    
+    func testWhenInputIsThreeReturnFizz() {
+        let result = FizzBuzz.process(3)
+        XCTAssertEqual(result, "Fizz")
     }
     
 }
