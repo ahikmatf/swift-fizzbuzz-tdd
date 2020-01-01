@@ -43,7 +43,7 @@ class FizzBuzzTests: XCTestCase {
         expecting(12, willResult: "Fizz")
     }
     
-    func testWhenInputIsFiceReturnBuzz() {
+    func testWhenInputIsFiveReturnBuzz() {
         expecting(5, willResult: "Buzz")
     }
     
