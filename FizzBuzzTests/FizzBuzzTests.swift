@@ -11,7 +11,9 @@ import XCTest
 
 class FizzBuzz {
     static func process(_ number: Int) -> String {
-        if number % 3 == 0 {
+        if number == 15 {
+            return "FizzBuzz"
+        } else if number % 3 == 0 {
             return "Fizz"
         } else if number % 5 == 0 {
             return "Buzz"
@@ -49,6 +51,10 @@ class FizzBuzzTests: XCTestCase {
         expecting(10, willResult: "Buzz")
         expecting(20, willResult: "Buzz")
         expecting(25, willResult: "Buzz")
+    }
+    
+    func testWhenInputIsFifteenThenReturnFizzBuzz() {
+        expecting(15, willResult: "FizzBuzz")
     }
     
     
