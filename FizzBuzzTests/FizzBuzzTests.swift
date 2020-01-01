@@ -26,13 +26,11 @@ class FizzBuzzTests: XCTestCase {
     }
     
     func testWhenInputIsTwo() {
-        let result = FizzBuzz.process(2)
-        XCTAssertEqual(result, "2")
+        expecting(2, willResult: "2")
     }
     
     func testWhenInputIsThreeReturnFizz() {
-        let result = FizzBuzz.process(3)
-        XCTAssertEqual(result, "Fizz")
+        expecting(3, willResult: "Fizz")
     }
     
     func testWhenInputIsMultipleOfThreeThenReturnFizz() {
