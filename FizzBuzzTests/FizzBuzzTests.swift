@@ -13,6 +13,8 @@ class FizzBuzz {
     static func process(_ number: Int) -> String {
         if number % 3 == 0 {
             return "Fizz"
+        } else if number == 5 {
+            return "Buzz"
         }
         
         return "\(number)"
@@ -37,6 +39,10 @@ class FizzBuzzTests: XCTestCase {
         expecting(6, willResult: "Fizz")
         expecting(9, willResult: "Fizz")
         expecting(12, willResult: "Fizz")
+    }
+    
+    func testWhenInputIsFiceReturnBuzz() {
+        expecting(5, willResult: "Buzz")
     }
     
     
